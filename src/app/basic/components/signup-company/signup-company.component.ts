@@ -10,13 +10,14 @@ import { AuthService } from '../../services/auth/auth.service';
   templateUrl: './signup-company.component.html',
   styleUrl: './signup-company.component.scss'
 })
+
 export class SignupCompanyComponent {
+
   validateForm !: FormGroup;
   constructor(private fb:FormBuilder,
     private authService:AuthService,
     private notification:NzNotificationService,
     private router:Router){}
-
 
     ngOnInit(){
       this.validateForm=this.fb.group({
@@ -28,6 +29,7 @@ export class SignupCompanyComponent {
         checkPassword:[null,[Validators.required]]
       })
     }
+
     submitForm(){
       this.authService.registerCompany(this.validateForm.value).subscribe(res=>{
         this.notification.success('SUCCESS',`Signup Successful`,{nzDuration:5000});
@@ -37,4 +39,5 @@ export class SignupCompanyComponent {
       })
     }
 
+    
 }
