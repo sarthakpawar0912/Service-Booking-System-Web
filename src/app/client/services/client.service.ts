@@ -3,11 +3,12 @@ import { Injectable } from '@angular/core';
 import { catchError, Observable, throwError } from 'rxjs';
 import { UserStorageService } from '../../basic/services/storage/user-storage.service';
 
-
 const BASIC_URL="http://localhost:8080/";
+
 @Injectable({
   providedIn: 'root'
 })
+
 export class ClientService {
 
   constructor(private http:HttpClient) { }
@@ -82,4 +83,5 @@ export class ClientService {
         'Bearer '+UserStorageService.getToken()
       )
   }
+  
 }
