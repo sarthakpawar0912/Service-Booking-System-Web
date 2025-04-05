@@ -1,5 +1,6 @@
 <div class="main-content">
   <!-- Search Bar -->
+  
   <div class="search-container">
     <form nz-form [formGroup]="validateForm" class="search-bar">
       <input 
@@ -12,6 +13,7 @@
     </form>
   </div>
 
+ 
   <div class="bg">
     <div class="ad-card" *ngFor="let ad of ads">
       <div nz-row [nzGutter]="12">
@@ -24,6 +26,7 @@
           />
         </div>
   
+     
         <!-- Ad Details Section -->
         <div nz-col [nzSpan]="18" class="ad-details">
           <h2 class="ad-title" routerLink="/company/ad/{{ ad.id }}">
@@ -40,6 +43,7 @@
               <span class="info-value">{{ ad.description }}</span>
             </p>
           </div>
+       
           <div class="ad-actions">
             <button nz-button nzType="primary" routerLink="/client/ad/{{ ad.id }}">View</button>
           </div>
