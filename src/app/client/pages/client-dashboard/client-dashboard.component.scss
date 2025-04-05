@@ -160,20 +160,17 @@ button[nz-button] {
   background: #1890ff;
   border-color: #1890ff;
 }
-
 [nz-button][nzType="primary"]:hover {
   background: #40a9ff;
   border-color: #40a9ff;
   transform: translateY(-2px);
 }
-
 /* Responsive Design */
 @media (max-width: 768px) {
   .search-bar {
     width: 100%;
     max-width: 250px;
   }
-
   .search-bar:hover {
     transform: scale(1.01);
   }
