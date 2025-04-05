@@ -73,5 +73,4 @@ export class LoginComponent implements OnInit {
       this.notification.error('Error', 'Please fill in the required fields', { nzDuration: 5000 });
     }
   }
-  
 }
