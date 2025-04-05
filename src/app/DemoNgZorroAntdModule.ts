@@ -86,6 +86,7 @@ import { HttpClientModule } from '@angular/common/http';
     NzButtonModule,
     NzTableModule
   ],
+
   providers:[{provide:NZ_I18N,useValue:en_US}],
  
   exports:[
@@ -153,19 +154,19 @@ import { HttpClientModule } from '@angular/common/http';
    NzWaveModule,
    NzResizableModule,
    NzSegmentedModule,
-   NzModalModule, NzCardComponent,
-       NzCardModule,
-       NzCardGridDirective,
-       NzCardModule,
-    NzButtonModule,
-    NzGridModule,
-    CommonModule
+   NzModalModule, 
+   NzCardComponent,
+   NzCardModule,
+   NzCardGridDirective,
+   NzCardModule,
+   NzButtonModule,
+   NzGridModule,
+   CommonModule
   ]
 })
 export class AppModule { }
 
 @NgModule({
-
 })
 export class DemoNgZorroAntdModule{}
 
@@ -177,9 +178,12 @@ export class DemoNgZorroAntdModule{}
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
+
 isClientLoggedIn: any;
 isCompanyLoggedIn: any;
+
 logout() {
 throw new Error('Method not implemented.');
 }
