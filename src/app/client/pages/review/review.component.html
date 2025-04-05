@@ -1,0 +1,61 @@
+<div class="parent">
+  <div class="child">
+    <div nz-row class="imgDiv">
+      <h2 class="form-title">Post Review</h2>
+    </div>
+
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="giveReview()">
+      <!-- Review Textarea -->
+      <div nz-row>
+        <div nz-col nzSpan="24">
+          <nz-form-item>
+            <nz-form-control 
+              nzHasFeedback 
+              nzErrorTip="Please enter a review (at least 2 characters)"
+            >
+              <textarea 
+                rows="5" 
+                nz-input 
+                placeholder="Write a Review" 
+                formControlName="review"
+              ></textarea>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <!-- Rating Input -->
+      <div nz-row>
+        <div nz-col nzSpan="24">
+          <nz-form-item>
+            <nz-form-control 
+              nzHasFeedback 
+              nzErrorTip="Please select a rating between 1 and 5"
+            >
+              <nz-rate 
+                formControlName="rating" 
+                [nzAllowHalf]="false"
+                [nzCount]="5"
+              ></nz-rate>
+            </nz-form-control>
+          </nz-form-item>
+        </div>
+      </div>
+
+      <!-- Submit Button -->
+      <div nz-row>
+        <div nz-col nzSpan="24" class="submit-btn-container">
+          <button 
+            nz-button 
+            class="login-form-button" 
+            nzType="primary"
+            [nzLoading]="isSubmitting"
+            [disabled]="validateForm.invalid || isSubmitting"
+          >
+            Post Review
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,211 @@
+/* Main Content Container - Enables Scrolling */
+.main-content {
+  max-height: calc(100vh - 20px); /* Leaves space at the bottom */
+  overflow-y: auto; /* Enables scrolling */
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+/* Background with extra space */
+.bg {
+  padding: 16px;
+  background-color: #f4f4f9;
+  padding-bottom: 50px; /* Ensures extra space after last ad */
+  margin-bottom: 50px;  /* More spacing */
+}
+
+/* Search Bar Styles */
+.search-container {
+  display: flex;
+  justify-content: center;
+  padding: 16px 0;
+}
+
+.search-bar {
+  width: 300px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:hover {
+  transform: scale(1.02);
+}
+
+.search-bar input {
+  border-radius: 20px;
+  padding: 8px 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.search-bar:hover input {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.search-bar input:focus {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  outline: none;
+}
+
+/* Ad Card Styles */
+.ad-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 16px;
+  padding: 12px;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.ad-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Image Section */
+.ad-image {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 160px;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.ad-card:hover .profile-img {
+  transform: scale(1.05);
+  border-color: #1890ff;
+  box-shadow: 0 3px 10px rgba(24, 144, 255, 0.3);
+}
+
+/* Ad Details Section */
+.ad-details {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+.ad-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #1890ff;
+  cursor: pointer;
+  margin: 0 0 14px 0;
+  transition: all 0.3s ease;
+}
+
+.ad-card:hover .ad-title {
+  color: #40a9ff;
+  text-shadow: 0 1px 2px rgba(64, 169, 255, 0.2);
+}
+
+/* Ad Content */
+.ad-content {
+  margin-bottom: 14px;
+}
+
+.ad-info {
+  margin: 8px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Larger headers for price and description */
+.info-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #444;
+}
+
+/* Normal weight for values */
+.info-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: #000;
+}
+
+/* Divider */
+.divider {
+  border: none;
+  height: 1px;
+  background: #ccc;
+  margin: 8px 0;
+}
+
+/* Action Buttons */
+.ad-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+button[nz-button] {
+  height: 36px;
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 0 16px;
+  transition: all 0.3s ease;
+}
+
+[nz-button][nzType="primary"] {
+  background: #1890ff;
+  border-color: #1890ff;
+}
+
+[nz-button][nzType="primary"]:hover {
+  background: #40a9ff;
+  border-color: #40a9ff;
+  transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .search-bar {
+    width: 100%;
+    max-width: 250px;
+  }
+
+  .search-bar:hover {
+    transform: scale(1.01);
+  }
+
+  .ad-card {
+    padding: 10px;
+  }
+
+  .ad-title {
+    font-size: 20px;
+  }
+
+  .ad-info {
+    font-size: 14px;
+  }
+
+  .info-header {
+    font-size: 16px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    max-width: 120px;
+    height: 120px;
+  }
+
+  button[nz-button] {
+    height: 32px;
+    font-size: 12px;
+    padding: 0 12px;
+  }
+}

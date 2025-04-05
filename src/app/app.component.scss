@@ -1,0 +1,124 @@
+/* Prevent all scrolling at the root level */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Full-Width Fixed Header */
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 40px;
+  background: linear-gradient(135deg, #6a0dad, #ff007f); /* Default for logged-out state */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 70px; /* Fixed height */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+/* Override background for logged-in states */
+div[isClientLoggedIn] .main-header,
+div[isCompanyLoggedIn] .main-header {
+  background: #bb2929; /* Matches your inline style */
+}
+
+/* Header text styling */
+.main-header h2 {
+  color: white;
+  padding-left: 10px;
+  margin: 0;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+/* Navigation links */
+.nav-links {
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  color: #fff !important; /* White color applied to all links */
+  font-size: 18px;
+  font-weight: 500;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Enhanced hover effects */
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+/* Add a subtle glow effect on hover */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease;
+}
+
+.nav-links a:hover::after {
+  width: 200px;
+  height: 200px;
+  opacity: 0;
+}
+
+.nav-links a.active {
+  background: rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Fixed Content Area with No Scrolling */
+.main-content {
+  margin-top: 70px; /* Matches header height */
+  padding: 20px;
+  height: calc(100vh - 70px); /* Fixed height */
+  overflow: hidden; /* No scrolling allowed */
+  box-sizing: border-box;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-header {
+    padding: 15px 20px;
+  }
+  
+  .nav-links {
+    gap: 15px;
+  }
+  
+  .nav-links a {
+    font-size: 16px;
+    padding: 8px 15px;
+  }
+  
+  .main-content {
+    margin-top: 70px;
+    height: calc(100vh - 70px);
+  }
+}

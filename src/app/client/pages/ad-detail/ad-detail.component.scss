@@ -1,0 +1,420 @@
+.bg {
+  background: #f5f5f5;
+  padding: 20px;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-container {
+  height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding-right: 15px;
+}
+
+/* Custom Scrollbar for Entire Page */
+.page-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.page-container::-webkit-scrollbar-track {
+  background: #e8ecef;
+  border-radius: 5px;
+}
+
+.page-container::-webkit-scrollbar-thumb {
+  background: #6c757d;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+}
+
+.page-container::-webkit-scrollbar-thumb:hover {
+  background: #495057;
+}
+
+.ad-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 25px;
+  transition: all 0.3s ease;
+}
+
+.ad-details-container:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Top Section */
+.top-section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Image Section */
+.ad-image {
+  display: flex;
+  align-items: center;
+}
+
+.profile-img {
+  width: 100%;
+  max-width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.ad-details-container:hover .profile-img {
+  transform: scale(1.05);
+  border-color: #007bff;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+}
+
+/* Ad Details Section */
+.ad-details {
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.ad-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+  margin: 0 0 10px 0;
+  transition: all 0.3s ease;
+}
+
+.ad-details-container:hover .ad-title {
+  color: #0056b3;
+  text-shadow: 0 1px 3px rgba(0, 86, 179, 0.2);
+}
+
+.ad-content {
+  margin: 0;
+}
+
+.ad-info {
+  margin: 8px 0;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.info-header {
+  font-size: 18px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.info-value {
+  font-size: 16px;
+  font-weight: 400;
+  color: #212529;
+}
+
+.divider {
+  border: none;
+  height: 1px;
+  background: #dee2e6;
+  margin: 8px 0;
+}
+
+/* Book Service Section */
+.book-service {
+  padding: 20px;
+  border-left: 1px solid #e8e8e8;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #f9fbfd 0%, #eef2f5 100%);
+  border-radius: 8px;
+}
+
+.book-service-header h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.book-service-form {
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.book-date-label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.book-service:hover .book-date-label {
+  color: #007bff;
+}
+
+.custom-date-picker {
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid #ced4da;
+  padding: 8px;
+  transition: all 0.3s ease;
+}
+
+.custom-date-picker:hover,
+.custom-date-picker:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.book-button {
+  margin-top: 15px;
+  height: 40px;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 0 20px;
+  transition: all 0.3s ease;
+  width: 100%;
+  background: #007bff;
+  border-color: #007bff;
+}
+
+.book-button:hover {
+  background: #0056b3;
+  border-color: #0056b3;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+/* Review Section */
+.review-section {
+  margin-top: 25px;
+  padding-top: 25px;
+  border-top: 1px solid #e8e8e8;
+}
+
+.review-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 25px;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+
+
+.review-card {
+  margin-bottom: 25px;
+  padding: 25px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
+  border: 1px solid #e9ecef;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 123, 255, 0.2);
+  border-color: #007bff;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef;
+}
+
+.client-name {
+  font-size: 22px;
+  font-weight: 700;
+  color: #343a40;
+}
+
+.rating-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.rating-label {
+  font-size: 18px;
+  font-weight: 600;
+  color: #495057;
+}
+
+.review-rating {
+  font-size: 20px; /* Increased size for better visibility */
+}
+
+.review-text {
+  font-size: 18px;
+  color: #495057;
+  margin: 15px 0;
+  line-height: 1.6;
+}
+
+.review-date {
+  font-size: 16px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .page-container {
+    height: calc(100vh - 30px);
+  }
+
+  .ad-details-container {
+    padding: 15px;
+  }
+
+  .top-section {
+    margin-bottom: 15px;
+  }
+
+  .ad-title {
+    font-size: 22px;
+  }
+
+  .ad-info {
+    font-size: 14px;
+  }
+
+  .info-header {
+    font-size: 16px;
+  }
+
+  .info-value {
+    font-size: 14px;
+  }
+
+  .profile-img {
+    max-width: 200px;
+    height: 200px;
+  }
+
+  .book-service {
+    padding: 15px;
+    border-left: none;
+    border-top: 1px solid #e8e8e8;
+  }
+
+  .book-service-header h2 {
+    font-size: 20px;
+  }
+
+  .book-date-label {
+    font-size: 14px;
+  }
+
+  .book-button {
+    height: 36px;
+    font-size: 14px;
+    padding: 0 15px;
+  }
+
+  .review-title {
+    font-size: 24px;
+  }
+
+  .review-card {
+    padding: 15px;
+    margin-bottom: 20px;
+  }
+
+  .client-name {
+    font-size: 18px;
+  }
+
+  .rating-label {
+    font-size: 16px;
+  }
+
+  .review-rating {
+    font-size: 18px;
+  }
+
+  .review-text {
+    font-size: 16px;
+  }
+
+  .review-date {
+    font-size: 14px;
+  }
+}
+
+.bg {
+  background: #f5f5f5;
+  padding: 30px; /* Increased padding */
+  height: 100vh;
+  overflow: hidden;
+}
+
+.page-container {
+  height: calc(100vh - 60px); /* Increased height offset */
+  overflow-y: auto;
+  padding-right: 20px; /* More spacing */
+}
+
+/* Ad Details Container */
+.ad-details-container {
+  max-width: 1200px;
+  margin: 20px auto; /* Added margin for spacing */
+  padding: 30px; /* Increased padding */
+}
+
+/* Image Section */
+.ad-image {
+  margin-bottom: 20px; /* Added space below */
+}
+
+.profile-img {
+  max-width: 320px; /* Slightly increased */
+  height: 320px;
+  margin: 10px auto; /* Centered with margin */
+}
+
+/* Ad Details */
+.ad-details {
+  padding-left: 30px; /* Increased space */
+}
+
+.ad-title {
+  margin-bottom: 15px; /* More spacing */
+}
+
+/* Book Service Section */
+.book-service {
+  padding: 25px; /* More padding */
+  margin-top: 20px; /* Added space from above */
+}
+
+/* Review Section */
+.review-section {
+  margin-top: 35px; /* Increased margin */
+  padding-top: 30px;
+}
+
+.review-card {
+  padding: 30px; /* More padding inside */
+  margin-bottom: 30px; /* Added space between reviews */
+}

@@ -1,0 +1,90 @@
+<div class="bg" *ngIf="ad">
+  <div class="page-container">
+    <div class="ad-details-container">
+      <div nz-row [nzGutter]="16">
+        <!-- Left Section: Image and Details -->
+        <div nz-col [nzSpan]="16" class="top-section">
+          <div class="ad-detail" nz-row [nzGutter]="16">
+            <!-- Profile Image -->
+            <div nz-col [nzSpan]="8" class="ad-image">
+              <img class="profile-img" [src]="avatarUrl" alt="profile" />
+            </div>
+
+            <!-- Ad Details -->
+            <div nz-col [nzSpan]="16" class="ad-details">
+              <h2 class="ad-title">
+                {{ ad.serviceName }}
+              </h2>
+              <div class="ad-content">
+                <p class="ad-info">
+                  <span class="info-header">Price:</span> 
+                  <span class="info-value">{{ ad.price }}</span>
+                </p>
+                <hr class="divider" />
+                <p class="ad-info">
+                  <span class="info-header">Description:</span> 
+                  <span class="info-value">{{ ad.description }}</span>
+                </p>
+                <hr class="divider" />
+                <p class="ad-info">
+                  <span class="info-header">Company Name:</span> 
+                  <span class="info-value">{{ ad.companyName }}</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Section: Book Service -->
+        <div nz-col [nzSpan]="8" class="book-service">
+          <div class="book-service-header">
+            <h2>Book Service</h2>
+          </div>
+          <form nz-form [formGroup]="validateForm" class="book-service-form">
+            <div nz-row>
+              <div nz-col nzSpan="24">
+                <nz-form-item>
+                  <nz-form-label [nzSpan]="24" nzFor="bookDate" class="book-date-label">
+                    Date of Booking
+                  </nz-form-label>
+                  <nz-form-control [nzSpan]="24">
+                    <nz-date-picker formControlName="bookDate" name="bookDate" id="bookDate" class="custom-date-picker"></nz-date-picker>
+                  </nz-form-control>
+                </nz-form-item>
+              </div>
+            </div>
+            <button nz-button [nzType]="'primary'" [disabled]="validateForm.invalid" (click)="bookService()" class="book-button">
+              Book Now
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Review Section -->
+      <div class="review-section">
+        <h2 class="review-title">Customer Reviews</h2>
+        <div class="reviews-container">
+          <div class="review-card" *ngFor="let review of reviews">
+            <div class="review-header">
+              <span class="client-name"><strong>{{review.clientName}}</strong></span>
+              <div class="rating-container">
+                <span class="rating-label">Rating:</span>
+                <nz-rate disabled [ngModel]="review.rating" class="review-rating"></nz-rate>
+              </div>
+            </div>
+            <p class="review-text">
+              <strong>Review:</strong> {{review.review}}
+            </p>
+            <p class="review-date">
+              <strong>Posted on:</strong> {{review.reviewDate | date:"dd/MM/yyyy"}}
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Extra space after last review -->
+      <div class="bottom-spacing"></div>
+
+    </div>
+  </div>
+</div>

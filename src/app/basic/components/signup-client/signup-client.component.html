@@ -1,0 +1,51 @@
+<div class="bg">
+  <div class="parent">
+    <div class="child">
+      <div nz-col>
+        <h1 style="text-align: center; margin-bottom: 30px;">Client Signup</h1>
+      </div>
+      <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="The input is not valid E-mail">
+            <input nz-input placeholder="E-mail" formControlName="email" id="email" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please input your password!">
+            <input nz-input type="password" placeholder="Password" formControlName="password" id="password" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please confirm your password!">
+            <input nz-input type="password" placeholder="Confirm Password" formControlName="checkPassword" id="checkPassword" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please input your name">
+            <input nz-input placeholder="Name" formControlName="name" id="name" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please input your last name">
+            <input nz-input placeholder="Last Name" formControlName="lastname" id="lastname" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <nz-form-item>
+          <nz-form-control nzHasFeedback nzErrorTip="Please input valid phone number">
+            <input nz-input placeholder="Phone" formControlName="phone" id="phone" />
+          </nz-form-control>
+        </nz-form-item>
+
+        <div style="text-align: center; margin-top: 20px;">
+          <button nz-button class="register-btn" nzType="primary" type="submit" [disabled]="validateForm.invalid">Register</button>
+          <p class="login-link">Already have an account? <a routerLink="/login">Login now!</a></p>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

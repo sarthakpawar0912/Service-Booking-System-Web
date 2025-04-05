@@ -1,0 +1,48 @@
+<div class="signup-container">
+  <div class="signup-box">
+    <h1>Company Signup</h1>
+    <form nz-form [formGroup]="validateForm" (ngSubmit)="submitForm()">
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Enter a valid E-mail">
+          <input nz-input type="email" placeholder="E-mail" formControlName="email" id="email" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Password must be at least 6 characters">
+          <input nz-input type="password" placeholder="Password" formControlName="password" id="password" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Passwords must match!">
+          <input nz-input type="password" placeholder="Confirm Password" formControlName="checkPassword" id="confirm-password" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Enter your company name">
+          <input nz-input type="text" placeholder="Company Name" formControlName="name" id="name" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Enter a valid address">
+          <input nz-input type="text" placeholder="Company Address" formControlName="address" id="address" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <nz-form-item>
+        <nz-form-control nzHasFeedback nzErrorTip="Enter a valid phone number">
+          <input nz-input type="tel" placeholder="Phone" formControlName="phone" id="phone" />
+        </nz-form-control>
+      </nz-form-item>
+
+      <button nz-button class="register-btn" nzType="primary" type="submit">Register</button>
+
+      <p class="login-link">Already have an account? <a routerLink="/login">Login now!</a></p>
+
+    </form>
+  </div>
+</div>

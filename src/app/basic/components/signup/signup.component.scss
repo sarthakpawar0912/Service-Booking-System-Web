@@ -1,0 +1,59 @@
+/* Container Styling (same as .bg from login) */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #b621fe, #1fd1f9); /* Magenta-violet gradient */
+}
+
+/* Section Styling (similar to .child from login) */
+.section {
+  text-align: center;
+  background: #ffffff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 450px; /* Matching login form width */
+}
+
+/* Header Styling */
+.header h1 {
+  font-size: 1.8rem; /* Matching login h1 */
+  color: #b621fe; /* Matching login color */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.header p {
+  font-size: 16px;
+  margin-bottom: 20px;
+  color: #555555;
+}
+
+/* Buttons Container */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Space between buttons */
+}
+
+/* Button Styling (matching login button) */
+[nz-button] {
+  background-color: #b621fe;
+  color: white;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  border: none;
+  padding: 0 20px; /* Adjusted padding for better text fit */
+  min-width: 200px; /* Minimum width to ensure text fits */
+  white-space: nowrap; /* Prevents text wrapping */
+}
+
+[nz-button]:hover {
+  background-color: #8c19c4; /* Matching login hover color */
+}

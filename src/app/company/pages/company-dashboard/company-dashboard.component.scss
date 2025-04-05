@@ -1,0 +1,173 @@
+/* Centered Form Styling */
+.center-form {
+  max-width: 90%;
+  margin: 40px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #6a0572, #a4508b);
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page Title */
+.page-title {
+  text-align: center;
+  color: #ffccff;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table Container */
+.table-container {
+  width: 100%;
+  max-height: 400px; /* Set a fixed height for scrolling */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Table Styling */
+nz-table {
+  background: white;
+  border-radius: 8px;
+  width: 100%;
+}
+
+th, td {
+  text-align: center;
+  padding: 10px;
+}
+
+th {
+  background: linear-gradient(135deg, #6a0572, #a4508b);
+  color: #ffccff;
+  font-weight: bold;
+  font-size: 18px;
+  text-align: center;
+  position: sticky; /* Keep header fixed while scrolling */
+  top: 0; /* Stick to top */
+  z-index: 1; /* Ensure header stays above content */
+}
+
+td {
+  font-size: 14px;
+  color: #333;
+}
+
+/* Status Text Styling */
+.status-text {
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.status-text.pending {
+  background: #ffcc00;
+  color: black;
+}
+
+.status-text.approved {
+  background: #00cc66;
+  color: white;
+}
+
+.status-text.rejected {
+  background: #ff3333;
+  color: white;
+}
+
+/* Action Button Styling */
+.action-button {
+  cursor: pointer;
+  padding: 4px 8px;
+  margin: 0 5px;
+  border-radius: 4px;
+  font-weight: bold;
+  color: white;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.approve-button {
+  background: #52c41a;
+}
+
+.approve-button:hover {
+  background: #45a014;
+}
+
+.reject-button {
+  background: #ff0000;
+}
+
+.reject-button:hover {
+  background: #cc0000;
+}
+
+/* Hover Effects */
+nz-table tbody tr:hover {
+  background-color: rgba(164, 80, 139, 0.1);
+}
+
+/* Scrollbar Styling */
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #a4508b;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #6a0572;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  th, td {
+    padding: 8px;
+  }
+  
+  th {
+    font-size: 14px;
+  }
+  
+  td {
+    font-size: 12px;
+  }
+  
+  .action-button {
+    padding: 3px 6px;
+    font-size: 12px;
+    margin: 0 3px;
+  }
+  
+  .center-form {
+    margin: 20px auto;
+    padding: 15px;
+  }
+  
+  .page-title {
+    font-size: 20px;
+  }
+  
+  .status-text {
+    padding: 3px 6px;
+    font-size: 12px;
+  }
+  
+  .table-container {
+    max-height: 300px; /* Adjust height for smaller screens */
+  }
+}

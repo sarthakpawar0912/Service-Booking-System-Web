@@ -1,0 +1,86 @@
+<div class="ad-container">
+    <div class="ad-box">
+        <div nz-row class="imgDiv">
+            <h2>Create Ad</h2>
+        </div>
+
+        <form nz-form [formGroup]="validateForm" (ngSubmit)="postAd()">
+            <!-- Image Upload Section -->
+            <div nz-row>
+                <div nz-col [nzMd]="24" [nzSm]="24" [nzXs]="24">
+                    <div class="profile-badge">
+                        <label for="upload_profile_image" class="upload-label">
+                            <img class="profile" *ngIf="imagePreview" [src]="imagePreview" alt="Uploaded Image" />
+                            <i *ngIf="!imagePreview" nz-icon nzType="camera" class="upload-icon"></i>
+                        </label>
+                        <input
+                            id="upload_profile_image"
+                            type="file"
+                            accept="image/png, image/gif, image/jpeg"
+                            (change)="onFileSelected($event)"
+                        />
+                        <button nz-button nzShape="circle" class="upload-btn">
+                            <i nz-icon nzType="upload"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Service Name -->
+            <div nz-row style="margin-top: 20px;">
+                <div nz-col [nzSpan]="24">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback nzErrorTip="This field is required!">
+                            <input
+                                nz-input
+                                placeholder="Service Name"
+                                formControlName="serviceName"
+                            />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+
+            <!-- Description -->
+            <div nz-row style="margin-top: 20px;">
+                <div nz-col [nzSpan]="24">
+                    <nz-form-item>
+                        <nz-form-control nzErrorTip="This field is required!">
+                            <textarea
+                                nz-input
+                                rows="4"
+                                placeholder="Enter Service Description"
+                                formControlName="description"
+                            ></textarea>
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+
+            <!-- Price -->
+            <div nz-row style="margin-top: 20px;">
+                <div nz-col [nzSpan]="24">
+                    <nz-form-item>
+                        <nz-form-control nzHasFeedback nzErrorTip="This field is required!">
+                            <input
+                                nz-input
+                                type="number"
+                                placeholder="Price"
+                                formControlName="price"
+                            />
+                        </nz-form-control>
+                    </nz-form-item>
+                </div>
+            </div>
+
+            <!-- Submit Button -->
+            <div nz-row style="margin-top: 30px; text-align: center;">
+                <div nz-col [nzSpan]="24">
+                    <button nz-button nzType="primary" [disabled]="!validateForm.valid">
+                        Add
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

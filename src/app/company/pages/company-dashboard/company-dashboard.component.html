@@ -1,0 +1,47 @@
+<div class="center-form">
+  <h1 class="page-title">Bookings</h1>
+
+  <div class="table-container">
+    <nz-table 
+      #basicTable 
+      [nzBordered]="true"
+      [nzData]="bookings" 
+      [nzShowPagination]="false"
+      [nzPageSize]="100" 
+    >
+      <thead>
+        <tr>
+          <th nzWidth="20%">Client Name</th>
+          <th nzWidth="20%">Service</th>
+          <th nzWidth="20%">Date</th>
+          <th nzWidth="20%">Status</th>
+          <th nzWidth="20%">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let booking of bookings">
+          <td>{{ booking.userName }}</td>
+          <td>{{ booking.serviceName }}</td>
+          <td>{{ booking.bookDate | date: 'dd/MM/yyyy' }}</td>
+          <td>
+            <span class="status-text" [ngClass]="{
+              'pending': booking.reservationStatus === 'PENDING',
+              'approved': booking.reservationStatus === 'APPROVED',
+              'rejected': booking.reservationStatus === 'REJECTED'
+            }">
+              {{ booking.reservationStatus | titlecase }}
+            </span>
+          </td>
+          <td>
+            <span *ngIf="booking.reservationStatus === 'PENDING'">
+              <span class="action-button approve-button" 
+                (click)="changeBookingStatus(booking.id, 'Approve')">Approve</span>
+              <span class="action-button reject-button" 
+                (click)="changeBookingStatus(booking.id, 'Reject')">Reject</span>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </nz-table>
+  </div>
+</div>

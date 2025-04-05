@@ -1,0 +1,43 @@
+<!-- HTML Template -->
+<div class="bg">
+  <div class="ads-container">
+    <div class="ad-card" *ngFor="let ad of ads">
+      <div nz-row [nzGutter]="16">
+        <!-- Image Section -->
+        <div nz-col [nzSpan]="6" class="ad-image">
+          <img
+            class="profile"
+            [src]="updateImg(ad.returnedImg)"
+            alt="Ad Image"
+          />
+        </div>
+
+        <!-- Ad Details Section -->
+        <div nz-col [nzSpan]="18" class="ad-details">
+          <h2 class="ad-title" routerLink="/company/ad/{{ ad.id }}">
+            {{ ad.serviceName }}
+          </h2>
+          <div class="ad-content">
+            <p class="ad-info">
+              <span class="info-header">Price:</span> <span class="info-value">{{ ad.price }}</span>
+            </p>
+            <hr class="divider" />
+            <p class="ad-info">
+              <span class="info-header">Description:</span> <span class="info-value">{{ ad.description }}</span>
+            </p>
+          </div>
+
+          <!-- Action Buttons -->
+          <div class="ad-actions">
+            <button nz-button nzType="primary" nzSize="small" [routerLink]="'/company/update/' + ad.id">
+              Update
+            </button>
+            <button (click)="deleteAd(ad.id)" nz-button nzType="primary" nzDanger nzSize="small">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,50 @@
+<div class="main-content">
+  <!-- Search Bar -->
+  <div class="search-container">
+    <form nz-form [formGroup]="validateForm" class="search-bar">
+      <input 
+        nz-input 
+        placeholder="Search Services" 
+        nzSize="large" 
+        formControlName="Service" 
+        (ngModelChange)="searchAdByName($event)"
+      />
+    </form>
+  </div>
+
+  <div class="bg">
+    <div class="ad-card" *ngFor="let ad of ads">
+      <div nz-row [nzGutter]="12">
+        <!-- Image Section -->
+        <div nz-col [nzSpan]="6" class="profile ad-image">
+          <img 
+            [src]="updateImg(ad.returnedImg)" 
+            alt="Ad Image"
+            class="profile-img"
+          />
+        </div>
+  
+        <!-- Ad Details Section -->
+        <div nz-col [nzSpan]="18" class="ad-details">
+          <h2 class="ad-title" routerLink="/company/ad/{{ ad.id }}">
+            {{ ad.serviceName }}
+          </h2>
+          <div class="ad-content">
+            <p class="ad-info">
+              <span class="info-header">Price:</span> 
+              <span class="info-value">{{ ad.price }}</span>
+            </p>
+            <hr class="divider" />
+            <p class="ad-info">
+              <span class="info-header">Description:</span> 
+              <span class="info-value">{{ ad.description }}</span>
+            </p>
+          </div>
+          <div class="ad-actions">
+            <button nz-button nzType="primary" routerLink="/client/ad/{{ ad.id }}">View</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
