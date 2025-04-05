@@ -10,7 +10,8 @@
       [nzShowPagination]="false"
       [nzBordered]="true"
     >
-      <thead>
+     
+    <thead>
         <tr>
           <th nzWidth="25%">Service</th>
           <th nzWidth="25%">Date</th>
@@ -19,6 +20,7 @@
         </tr>
       </thead>
       <tbody>
+      
         <tr *ngFor="let booking of basicTable.data">
           <td>{{ booking.serviceName }}</td>
           <td>{{ booking.bookDate | date: 'dd/MM/yyyy' }}</td>
@@ -32,6 +34,7 @@
             </span>
           </td>
           <td>
+      
             <span *ngIf="booking.reviewStatus === 'FALSE'">
               <button 
                 nzSize="small" 
