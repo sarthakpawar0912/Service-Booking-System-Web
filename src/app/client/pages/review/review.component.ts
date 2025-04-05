@@ -11,17 +11,20 @@ import { UserStorageService } from '../../../basic/services/storage/user-storage
   templateUrl: './review.component.html',
   styleUrl: './review.component.scss'
 })
+
 export class ReviewComponent {
-bookService() {
-throw new Error('Method not implemented.');
-}
+
+  bookService() {
+  throw new Error('Method not implemented.');
+  }
+  
   bookId: number;
   userId: number;
   validateForm: FormGroup;
   isSubmitting = false;
-ad: any;
-avatarUrl: any;
-reviews: any;
+  ad: any;
+  avatarUrl: any;
+  reviews: any;
 
   constructor(
     private fb: FormBuilder,
@@ -105,4 +108,5 @@ reviews: any;
       }
     });
   }
+  
 }
