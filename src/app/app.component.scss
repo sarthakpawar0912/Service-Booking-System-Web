@@ -5,7 +5,6 @@ html, body {
   height: 100vh;
   overflow: hidden;
 }
-
 /* Full-Width Fixed Header */
 .main-header {
   display: flex;
@@ -21,13 +20,11 @@ html, body {
   left: 0;
   z-index: 1000;
 }
-
 /* Override background for logged-in states */
 div[isClientLoggedIn] .main-header,
 div[isCompanyLoggedIn] .main-header {
   background: #bb2929; /* Matches your inline style */
 }
-
 /* Header text styling */
 .main-header h2 {
   color: white;
