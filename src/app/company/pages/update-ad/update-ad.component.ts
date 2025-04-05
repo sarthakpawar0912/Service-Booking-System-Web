@@ -10,7 +10,9 @@ import { CompanyService } from "../../services/company.service";
   templateUrl: './update-ad.component.html',
   styleUrl: './update-ad.component.scss'
 })
+
 export class UpdateAdComponent {
+ 
   adId: any;
   validateForm!: FormGroup;
   selectedFile: File | null = null;
@@ -68,7 +70,6 @@ export class UpdateAdComponent {
     }
   }
   
-
   private previewImage(file: File): void {
     const reader = new FileReader();
     reader.onload = () => {
