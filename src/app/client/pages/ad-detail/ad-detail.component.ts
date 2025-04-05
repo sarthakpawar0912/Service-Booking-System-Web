@@ -12,8 +12,8 @@ import { UserStorageService } from '../../../basic/services/storage/user-storage
   styleUrl: './ad-detail.component.scss'
 })
 
-
 export class AdDetailComponent {
+
   adId!: string;
   avatarUrl: any;
   ad: any;
@@ -102,6 +102,7 @@ export class AdDetailComponent {
       this.notification.error('Error', 'Please select a booking date');
     }
   }
+  
 }
   
 
