@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './basic/components/login/login.component';
@@ -26,6 +25,7 @@ import { NzNotificationModule } from 'ng-zorro-antd/notification';
 registerLocaleData(en);
 
 @NgModule({
+ 
   declarations: [
     AppComponent,
     LoginComponent,
@@ -33,6 +33,7 @@ registerLocaleData(en);
     SignupClientComponent,
     SignupCompanyComponent,
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
@@ -46,11 +47,13 @@ registerLocaleData(en);
     NzButtonModule,       // <-- Import button module
     NzNotificationModule  // <-- Import notification module
   ],
+
   providers: [
     provideNzI18n(en_US),
     provideAnimationsAsync(),
     provideHttpClient()
   ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }
