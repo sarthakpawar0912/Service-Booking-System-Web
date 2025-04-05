@@ -8,13 +8,12 @@ import { CompanyService } from '../../services/company.service';
   templateUrl: './all-ads.component.html',
   styleUrl: './all-ads.component.scss'
 })
-export class AllAdsComponent {
 
+export class AllAdsComponent {
 
   ads:any;
   constructor(private companyServices:CompanyService,
     private notification:NzNotificationService
-  
   ){}
   
     ngOnInit()
