@@ -9,9 +9,9 @@ import { ClientService } from '../../services/client.service';
   styleUrl: './client-dashboard.component.scss'
 })
 export class ClientDashboardComponent {
+ 
   ads: any[] = [];
   validateForm!: FormGroup;
-
 
   constructor(private clientService: ClientService,
     private fb: FormBuilder
@@ -50,8 +50,7 @@ export class ClientDashboardComponent {
     }
     return `data:image/png;base64,${img}`;
   }
-
-  
+ 
   searchAdByName(searchTerm: string) {
     if (!searchTerm) {
       this.getAllAds();
@@ -68,4 +67,5 @@ export class ClientDashboardComponent {
       }
     });
   }
+  
 }
