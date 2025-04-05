@@ -38,7 +38,6 @@
   justify-content: center;
   gap: 20px; /* Space between buttons */
 }
-
 /* Button Styling (matching login button) */
 [nz-button] {
   background-color: #b621fe;
@@ -53,7 +52,6 @@
   min-width: 200px; /* Minimum width to ensure text fits */
   white-space: nowrap; /* Prevents text wrapping */
 }
-
 [nz-button]:hover {
   background-color: #8c19c4; /* Matching login hover color */
 }
