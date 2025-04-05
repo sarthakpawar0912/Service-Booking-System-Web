@@ -7,6 +7,7 @@ import { ClientService } from '../../services/client.service';
   templateUrl: './my-bookings.component.html',
   styleUrl: './my-bookings.component.scss'
 })
+
 export class MyBookingsComponent {
 
   bookedServices:any;
@@ -21,4 +22,5 @@ export class MyBookingsComponent {
       this.bookedServices=res;
     })
   }
+  
 }
