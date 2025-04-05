@@ -7,11 +7,12 @@ const BASIC_URL = 'http://localhost:8080/';  // Remove trailing slash
 
 export const AUTH_HEADER = 'authorization';
 
-
 @Injectable({
   providedIn: 'root'
 })
+
 export class AuthService {
+ 
   constructor(private http: HttpClient,
     private userstorageservice: UserStorageService,
   ) {}
@@ -49,5 +50,4 @@ export class AuthService {
       );
   }
   
-
 }
