@@ -12,6 +12,7 @@ import { UserStorageService } from '../../services/storage/user-storage.service'
   styleUrl: './login.component.scss'
 })
 export class LoginComponent implements OnInit {
+ 
   validateForm!: FormGroup; 
 
   constructor(
@@ -29,8 +30,6 @@ export class LoginComponent implements OnInit {
     });
   }
 
-
-  
   submitForm(): void {
     if (this.validateForm.valid) {
       console.log('Login form submitted:', this.validateForm.value);
@@ -75,20 +74,4 @@ export class LoginComponent implements OnInit {
     }
   }
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }
