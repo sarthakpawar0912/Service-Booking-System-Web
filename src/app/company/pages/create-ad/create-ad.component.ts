@@ -12,8 +12,8 @@ import { UserStorageService } from '../../../basic/services/storage/user-storage
   styleUrls: ['./create-ad.component.scss'],
 })
 
-
 export class CreateAdComponent implements OnInit {
+ 
   selectedFile: File | null = null;
   imagePreview: string | ArrayBuffer | null = null;
   validateForm!: FormGroup;
@@ -75,4 +75,5 @@ export class CreateAdComponent implements OnInit {
     }
   );
 }
+
 }
