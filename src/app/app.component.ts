@@ -9,6 +9,7 @@ import { NavigationEnd, Router } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   isCollapsed = false;
   isClientLoggedIn: boolean = false;
   isCompanyLoggedIn: boolean = false;
@@ -37,4 +38,5 @@ export class AppComponent {
     this.updateLoginStatus();
     this.router.navigateByUrl('/login');
   }
+  
 }
