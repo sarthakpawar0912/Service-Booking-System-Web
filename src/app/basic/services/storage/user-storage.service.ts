@@ -1,16 +1,18 @@
 import { Injectable } from '@angular/core';
 
-
 const TOKEN = 's_token';
 const USER = 's_user';
 
 @Injectable({
   providedIn: 'root'
 })
+
 export class UserStorageService {
+ 
   static saveUser(body: any) {
     throw new Error('Method not implemented.');
   }
+
   static saveToken(token: any) {
     throw new Error('Method not implemented.');
   }
@@ -67,7 +69,6 @@ export class UserStorageService {
   }
 
 
-
   // Get the user role
   static getUserRole(): string {
     const user = this.getUser();
@@ -111,4 +112,5 @@ export class UserStorageService {
   private isLocalStorage(): boolean {
     return typeof window !== 'undefined' && typeof localStorage !== 'undefined';
   }
+  
 }
