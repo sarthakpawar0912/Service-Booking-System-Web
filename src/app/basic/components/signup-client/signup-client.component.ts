@@ -11,8 +11,7 @@ import { AuthService } from '../../services/auth/auth.service';
   styleUrl: './signup-client.component.scss'
 })
 export class SignupClientComponent {
-  
-  
+   
   validateForm!: FormGroup;
 
   constructor(
@@ -74,4 +73,5 @@ export class SignupClientComponent {
       });
     }
   }
+
 }
