@@ -37,7 +37,7 @@ export class CompanyService {
         headers : this.createAuthorizationHeader()
       });
     }
-    
+
     deleteAd(adId:any):Observable<any>{
       return this.http.delete(BASIC_URL+`api/company/ad/${adId}`,{
         headers : this.createAuthorizationHeader()
@@ -58,9 +58,6 @@ export class CompanyService {
       });
     }
  
-
-
-
   private createAuthorizationHeader(): HttpHeaders {
     let authHeaders:HttpHeaders=new HttpHeaders();
     return authHeaders.set(
@@ -68,4 +65,5 @@ export class CompanyService {
       'Bearer '+UserStorageService.getToken()
     )
   }
+  
 }
