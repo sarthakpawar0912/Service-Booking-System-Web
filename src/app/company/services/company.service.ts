@@ -37,7 +37,6 @@ export class CompanyService {
         headers : this.createAuthorizationHeader()
       });
     }
-
     
     deleteAd(adId:any):Observable<any>{
       return this.http.delete(BASIC_URL+`api/company/ad/${adId}`,{
